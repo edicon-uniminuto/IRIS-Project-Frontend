@@ -1,0 +1,28 @@
+# Dependencias
+node_modules/
+
+# Angular & Builds
+.angular/
+dist/
+
+# Pruebas y Cobertura
+coverage/
+.cache/
+
+# Entornos y variables sensibles
+src/environments/environment.generated.ts
+.env
+.env.local
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+
+# Vercel & IDEs
+.vercel/
+.DS_Store
+*.log
+scratch/
+.idea/
+.vscode/

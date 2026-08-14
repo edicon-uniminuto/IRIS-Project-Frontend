@@ -1,0 +1,208 @@
+:host{display:block;min-height:100dvh;background:var(--page-bg)}
+.page-shell{min-height:100dvh;display:flex;flex-direction:column}
+.brand-bar{height:78px;background:var(--brand);display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100vw - 980px)/2));color:#fff}
+.brand{display:flex;align-items:center;gap:12px;letter-spacing:.08em;font-size:1.25rem}
+.brand strong{font-size:1.4rem;font-weight:800}
+.brand-logo-svg{flex-shrink:0}
+.brand-divider{opacity:.6;font-weight:300;margin:0 2px}
+.brand-app-name{font-weight:700;letter-spacing:.05em}
+.header-actions{display:flex;align-items:center;gap:10px}
+.user-greeting{font-size:.9rem;color:#fff;font-weight:600;margin-right:6px;background:rgba(255,255,255,.15);padding:6px 14px;border-radius:999px}
+.icon-btn,.logout{border:1px solid rgba(255,255,255,.55);background:transparent;color:#fff;border-radius:999px;min-height:38px;padding:0 12px;cursor:pointer}
+.icon-btn{width:38px;padding:0}
+
+.todo-card{width:min(980px,calc(100% - 32px));margin:34px auto;padding:34px;background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow)}
+.title-row{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}
+.title-row h1{margin:0;color:var(--brand-ink);font-size:clamp(1.8rem,4vw,2.4rem);font-weight:800}
+.title-row p{color:var(--muted);margin:6px 0 0}
+.counters{display:flex;gap:10px;flex-wrap:wrap}
+.counter-badge{padding:8px 14px;border-radius:999px;font-size:.88rem;color:var(--muted);background:var(--soft);border:1px solid var(--border)}
+.counter-badge b{color:var(--brand-ink)}
+
+/* Panel de Creación Compacto y Estilizado */
+.create-card{margin:20px 0 22px;padding:16px 20px;background:var(--soft);border:1px solid var(--border);border-radius:14px}
+.create-header{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.create-icon-badge{width:24px;height:24px;border-radius:50%;background:var(--brand);color:#043c38;display:grid;place-items:center}
+.create-header h3{margin:0;font-size:.96rem;color:var(--brand-ink);font-weight:700}
+
+.quick-add-row{display:flex;gap:10px}
+.quick-add-row input{flex:1;min-height:42px;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--text);padding:0 18px;font-size:.95rem}
+.btn-create-submit{min-height:42px;padding:0 22px;border:0;border-radius:999px;background:var(--brand);color:#043c38;font-weight:700;font-size:.92rem;cursor:pointer;transition:.18s ease}
+.btn-create-submit:hover:not(:disabled){transform:translateY(-1px);filter:brightness(1.05)}
+.btn-create-submit:disabled{opacity:.45;cursor:not-allowed}
+
+.details-toggle-row{margin-top:8px}
+.btn-toggle-details{border:0;background:none;color:var(--brand-strong);font-weight:600;font-size:.84rem;cursor:pointer;padding:2px 0;display:flex;align-items:center;gap:6px}
+.btn-toggle-details svg{transition:transform .2s ease}
+.btn-toggle-details svg.rotated{transform:rotate(180deg)}
+
+.advanced-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--border)}
+.advanced-grid label{display:grid;gap:6px;font-size:.82rem;font-weight:700;color:var(--muted);letter-spacing:.03em}
+.advanced-grid select,.advanced-grid input{min-height:40px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);padding:0 28px 0 12px}
+
+/* Controls & Filter Bar Unificada con Columnas Amplias */
+.controls-bar{display:grid;grid-template-columns:minmax(175px,1.3fr) minmax(190px,2fr) minmax(165px,1.3fr) auto;gap:10px;margin-bottom:22px;padding:10px 14px;background:var(--soft);border:1px solid var(--border);border-radius:14px;align-items:center}
+.controls-bar select{min-height:40px;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--text);padding:0 28px 0 14px;font-size:.88rem;font-weight:500}
+.search-input-wrapper{position:relative;display:flex;align-items:center}
+.search-icon{position:absolute;left:14px;color:var(--muted);pointer-events:none}
+.search-input-wrapper input{width:100%;min-height:40px;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--text);padding:0 14px 0 38px;font-size:.9rem}
+.btn-clear-filters{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:999px;padding:0 16px;min-height:40px;cursor:pointer;font-weight:600;font-size:.88rem;transition:.18s ease;white-space:nowrap}
+.btn-clear-filters:hover{background:var(--soft)}
+
+.list-heading{display:flex;align-items:center;justify-content:space-between;border-bottom:1px dashed var(--border);margin-bottom:14px;padding-bottom:8px}
+.list-heading h2{color:var(--brand-ink);font-size:1.1rem;margin:0}
+.list-heading span{color:var(--muted);font-size:.88rem}
+
+.task-list{display:grid;gap:8px}
+.task{display:grid;grid-template-columns:28px 24px 1fr auto;align-items:center;gap:8px;padding:11px 12px;background:var(--task-bg);border:1px solid var(--border);border-radius:10px;transition:.18s ease}
+.task:hover{transform:translateY(-1px);box-shadow:0 5px 16px rgba(34,85,80,.08)}
+.task.completed{opacity:.62}
+.task.completed .task-title{text-decoration:line-through}
+.task.overdue{border-left:4px solid var(--danger)}
+.task.soon{border-left:4px solid var(--brand-strong)}
+.drag{border:0;background:none;color:var(--muted);cursor:grab}
+.drag:disabled{opacity:.25;cursor:default}
+.check{width:20px;height:20px;accent-color:var(--brand-strong)}
+.task-main{min-width:0}
+.title-button{display:block;width:100%;text-align:left;border:0;background:none;color:var(--text);font:inherit;padding:0;cursor:pointer}
+.task-title{font-weight:650;overflow-wrap:anywhere}
+.meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px;align-items:center}
+.chip{font-size:.72rem;padding:3px 7px;border-radius:999px;background:var(--soft);color:var(--muted)}
+.category[data-category=work]{background:#dff5f2;color:#246d66}
+.category[data-category=personal]{background:#f2e7ff;color:#72539a}
+.category[data-category=study]{background:#e6efff;color:#476ba2}
+.priority[data-priority=high]{background:#ffe7e5;color:#a3443d}
+.priority[data-priority=low]{background:#edf4e6;color:#587447}
+.due{font-size:.76rem;color:var(--muted)}
+.overdue .due{color:var(--danger);font-weight:700}
+.soon .due{color:var(--brand-strong);font-weight:700}
+.task-actions{display:flex;align-items:center;gap:4px;flex-shrink:0;align-self:center}
+.task-actions button{border:0;background:none;color:var(--muted);font-size:1.1rem;cursor:pointer;min-width:32px;min-height:32px;display:grid;place-items:center}
+.task-actions .delete{color:var(--coral);font-size:1.5rem}
+
+.state{text-align:center;padding:42px 10px;color:var(--muted)}
+.state.empty div{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;margin:auto;background:var(--soft);color:var(--brand-strong);font-weight:900}
+.state h3{color:var(--text);margin-bottom:5px}
+.spinner{display:inline-block;width:28px;height:28px;border:3px solid var(--border);border-top-color:var(--brand-strong);border-radius:50%;animation:spin .8s linear infinite}
+.alert{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--danger-bg);color:var(--danger);padding:10px 12px;border-radius:999px;margin:16px 0}
+.alert button{border:0;background:none;color:inherit;text-decoration:underline;cursor:pointer}
+
+/* Paginador Estilizado de Alta Calidad */
+.pagination-bar{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:26px;padding:8px 16px;background:var(--soft);border:1px solid var(--border);border-radius:999px;width:fit-content;margin-left:auto;margin-right:auto}
+.btn-page-nav{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 16px;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--brand-ink);font-weight:650;font-size:.86rem;cursor:pointer;transition:all .18s ease}
+.btn-page-nav svg{transition:transform .18s ease}
+.btn-page-nav:hover:not(:disabled){background:var(--brand);color:#043c38;border-color:var(--brand);transform:translateY(-1px);box-shadow:0 3px 10px rgba(96,209,197,.25)}
+.btn-page-nav:disabled{opacity:.4;cursor:not-allowed;background:transparent;border-color:var(--border);color:var(--muted)}
+
+.page-indicator-pill{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:var(--surface);border:1px solid var(--border);border-radius:999px;font-size:.84rem;color:var(--muted);font-weight:500}
+.page-indicator-pill .indicator-label,.page-indicator-pill .indicator-separator{font-size:.82rem;opacity:.8}
+.page-indicator-pill .page-num{font-weight:800;color:var(--brand-ink)}
+.page-indicator-pill .page-num.current{color:var(--brand-strong);background:var(--soft);padding:1px 7px;border-radius:6px}
+
+/* Papelera Estilizada de Alta Calidad */
+.trash-section{margin-top:28px;border-top:1px dashed var(--border);padding-top:20px}
+.trash-toggle-btn{display:inline-flex;align-items:center;gap:10px;border:0;background:transparent;color:var(--brand-strong);font-weight:650;font-size:.92rem;cursor:pointer;padding:6px 14px;border-radius:999px;transition:background .18s ease}
+.trash-toggle-btn:hover{background:var(--soft)}
+.trash-toggle-btn .toggle-icon-badge{width:26px;height:26px;border-radius:50%;background:var(--soft);display:grid;place-items:center;color:var(--brand-strong)}
+.trash-toggle-btn .trash-badge{background:var(--coral);color:#fff;font-size:.75rem;font-weight:800;padding:2px 7px;border-radius:999px}
+.trash-toggle-btn svg{transition:transform .2s ease}
+.trash-toggle-btn svg.rotated{transform:rotate(180deg)}
+
+.trash-panel{margin-top:16px;padding:20px;background:var(--soft);border:1px solid var(--border);border-radius:14px;animation:modalIn .2s ease-out}
+.trash-panel-header{margin-bottom:14px;border-bottom:1px dashed var(--border);padding-bottom:10px}
+.trash-panel-header h3{margin:0 0 4px;font-size:1.05rem;color:var(--brand-ink);font-weight:700}
+.trash-panel-header .trash-subtext{font-size:.82rem;color:var(--muted)}
+
+.trash-empty-state{display:flex;align-items:center;gap:10px;padding:16px;color:var(--muted);font-size:.88rem;background:var(--surface);border-radius:10px;border:1px solid var(--border)}
+.trash-empty-state svg{color:var(--brand-strong)}
+.trash-empty-state p{margin:0}
+
+.trash-items-list{display:grid;gap:10px}
+.trash-item-card{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:10px;transition:transform .18s ease}
+.trash-item-card:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.04)}
+.trash-item-main{min-width:0;flex:1}
+.trash-item-title{font-weight:600;color:var(--text);font-size:.93rem;overflow-wrap:anywhere;display:block}
+.trash-item-meta{display:flex;gap:6px;margin-top:5px}
+
+.trash-item-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.trash-item-actions button{display:inline-flex;align-items:center;gap:5px;min-height:34px;padding:0 14px;border-radius:999px;font-size:.82rem;font-weight:650;cursor:pointer;transition:all .18s ease}
+.trash-item-actions .btn-restore{border:1px solid var(--border);background:var(--surface);color:var(--brand-strong)}
+.trash-item-actions .btn-restore:hover{background:var(--brand);color:#043c38;border-color:var(--brand)}
+.trash-item-actions .btn-permanent-delete{border:1px solid #ffe7e5;background:#ffe7e5;color:#a3443d}
+.trash-item-actions .btn-permanent-delete:hover{background:var(--danger);color:#fff;border-color:var(--danger)}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Minimal Footer Dark Teal (Estilo Landing Page) */
+.app-minimal-footer{margin-top:auto;padding:20px 24px;background:#022b28;color:#94a3b8;font-size:.84rem;border-top:1px solid rgba(255,255,255,.1)}
+.footer-content{max-width:980px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-content p{margin:0}
+.footer-content strong{color:#ffffff}
+.footer-meta{display:flex;align-items:center;gap:10px;color:#94a3b8}
+.footer-meta .dot-separator{opacity:.5}
+
+/* Modal General & Modal de Confirmación Peligro Garantizados con Margen Lateral Generoso */
+.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;z-index:9999;padding:24px 18px;overflow-y:auto}
+.modal-card{width:min(500px,calc(100% - 36px));max-width:calc(100% - 36px);max-height:calc(100dvh - 48px);box-sizing:border-box;background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.2);padding:24px;margin:auto;overflow-y:auto;animation:modalIn .2s ease-out}
+.modal-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed var(--border);padding-bottom:14px;margin-bottom:18px}
+.modal-header h2{margin:0;font-size:1.25rem;color:var(--brand-ink);font-weight:700}
+.modal-header .close-btn{border:0;background:none;font-size:1.6rem;color:var(--muted);cursor:pointer;line-height:1}
+.modal-body{display:grid;gap:16px}
+.modal-body .input-field{display:grid;gap:6px}
+.modal-body label{font-size:.75rem;font-weight:700;color:var(--muted);letter-spacing:.05em}
+.modal-body input,.modal-body select{min-height:44px;border:1px solid var(--border);border-radius:10px;padding:0 28px 0 14px;background:var(--surface);color:var(--text);font-size:.95rem}
+.modal-body .input-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.modal-footer{display:flex;justify-content:flex-end;gap:10px;margin-top:24px;padding-top:16px;border-top:1px solid var(--border)}
+.modal-footer .btn-cancel{border:1px solid var(--border);background:transparent;color:var(--text);border-radius:999px;padding:0 20px;min-height:42px;cursor:pointer;font-weight:600}
+.modal-footer .btn-save{border:0;background:var(--brand);color:#043c38;border-radius:999px;padding:0 24px;min-height:42px;cursor:pointer;font-weight:700}
+.modal-footer .btn-save:disabled{opacity:.45;cursor:not-allowed}
+
+/* Confirmation Modal Specifics */
+.confirm-danger-modal{width:min(480px,calc(100% - 36px));max-width:calc(100% - 36px)}
+.danger-header-title{display:flex;align-items:center;gap:10px}
+.danger-header-title h2{color:var(--danger)}
+.danger-icon-badge{width:34px;height:34px;border-radius:50%;background:#ffe7e5;color:var(--danger);display:grid;place-items:center;flex-shrink:0}
+.confirm-message{margin:0 0 8px;font-size:.95rem;color:var(--text);line-height:1.4}
+.confirm-message strong{color:var(--brand-ink)}
+.confirm-subtext{margin:0;font-size:.84rem;color:var(--muted)}
+.btn-danger-confirm{border:0;background:var(--danger);color:#fff;border-radius:999px;padding:0 22px;min-height:42px;cursor:pointer;font-weight:700;font-size:.88rem;transition:filter .18s ease}
+.btn-danger-confirm:hover{filter:brightness(1.1)}
+
+@keyframes modalIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+
+/* Responsividad Móvil Avanzada */
+@media(max-width:880px){
+  .controls-bar{grid-template-columns: 1fr 1fr; gap: 10px; padding: 12px;}
+  .search-group{grid-column: 1 / -1;}
+  .btn-clear-filters{grid-column: 1 / -1; justify-self: center; width: 100%;}
+}
+
+@media(max-width:760px){
+  .todo-card{width:calc(100% - 20px);margin:16px auto;padding:20px}
+  .title-row{display:flex;flex-direction:column;gap:12px}
+  .counters{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .advanced-grid{grid-template-columns:1fr}
+  .quick-add-row{flex-direction:column}
+  .trash-item-card{align-items:flex-start;flex-direction:column;gap:10px}
+  .trash-item-actions{width:100%;justify-content:flex-end}
+  .brand-bar{padding:0 16px;height:68px}
+  .user-greeting{padding:4px 10px;font-size:.82rem}
+  .footer-content{flex-direction:column;text-align:center;justify-content:center}
+  .pagination-bar{gap:8px;padding:6px 12px;flex-wrap:wrap}
+  .modal-card{width:calc(100% - 32px);max-width:calc(100% - 32px);max-height:calc(100dvh - 32px);padding:18px 16px}
+}
+
+@media(max-width:540px){
+  .controls-bar{grid-template-columns: 1fr; gap: 10px;}
+  .search-group{grid-column: 1;}
+  .btn-clear-filters{grid-column: 1; width: 100%;}
+}
+
+@media(max-width:480px){
+  .todo-card{width:calc(100% - 16px);margin:10px auto;padding:16px}
+  .user-greeting strong{max-width:110px;display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}
+  .counters{display:grid;grid-template-columns:1fr 1fr}
+  .modal-body .input-grid{grid-template-columns:1fr}
+  .btn-page-nav span{display:none}
+}

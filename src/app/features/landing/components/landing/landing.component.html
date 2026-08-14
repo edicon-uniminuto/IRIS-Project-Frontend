@@ -1,0 +1,196 @@
+<div class="landing-shell">
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="contact-info">
+        <span>servicio_cliente@iris.com.co</span>
+        <span>+57 314 2551613</span>
+      </div>
+      <div class="top-actions">
+        <span class="flag">CO</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="header-inner">
+      <div class="brand">
+        <svg class="brand-logo-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="irisGradLanding" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#00e676" />
+              <stop offset="50%" stop-color="#00d084" />
+              <stop offset="100%" stop-color="#60d1c5" />
+            </linearGradient>
+          </defs>
+          <g transform="rotate(-45 20 20)">
+            <rect x="6" y="14" width="28" height="12" rx="6" fill="url(#irisGradLanding)" />
+            <circle cx="27" cy="20" r="5" fill="#ffffff" />
+          </g>
+        </svg>
+        <strong>IRIS</strong>
+        <span class="sub-brand">COMPAÑÍA DE FINANCIAMIENTO</span>
+      </div>
+      <nav class="nav-menu">
+        <a href="#soluciones">Soluciones</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#seguridad">Seguridad</a>
+      </nav>
+      <div class="header-cta">
+        <button class="btn-outline" type="button" (click)="goToLogin()">Inicio Sesión</button>
+        <button class="btn-primary" type="button" (click)="goToRegister()">Vincúlate</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <h1>Gestión de Tareas Inteligente</h1>
+        <p class="hero-subtitle">Transforma la productividad de tu equipo en entregas inmediatas. <strong>¡Así de Simple!</strong></p>
+        <p class="hero-description">
+          Con IRIS To-Do, optimiza la organización de proyectos, prioriza tareas críticas, asigna etiquetas y mantén el
+          control total con seguridad garantizada.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary lg" type="button" (click)="goToRegister()">Crear Cuenta</button>
+          <button class="btn-outline lg" type="button" (click)="goToLogin()">Ingresar al Sistema</button>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="preview-card">
+          <div class="card-header">
+            <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <span class="preview-title">IRIS To-Do List</span>
+          </div>
+          <div class="preview-body">
+            <div class="preview-item done">
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Revisión de arquitectura Senior</strong>
+                <small>Trabajo · Prioridad Alta</small>
+              </div>
+            </div>
+            <div class="preview-item pending">
+              <span class="check-icon box"></span>
+              <div>
+                <strong>Pruebas unitarias e integración en Angular 21</strong>
+                <small>Estudio · Próxima a vencer</small>
+              </div>
+            </div>
+            <div class="preview-item pending">
+              <span class="check-icon box"></span>
+              <div>
+                <strong>Despliegue stateless en Vercel & MongoDB Atlas</strong>
+                <small>DevOps · Prioridad Media</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Cards Section -->
+  <section id="caracteristicas" class="value-section">
+    <div class="section-inner">
+      <h2>¿Por qué IRIS To-Do es la solución ideal para tu equipo?</h2>
+      <div class="yellow-divider"></div>
+      <div class="cards-grid">
+        <article class="value-card">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>AGILIDAD</h3>
+          <p>Organización inmediata con ordenamiento manual mediante arrastrar y soltar (Drag & Drop) y respuesta instantánea.</p>
+        </article>
+
+        <article class="value-card">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>SEGURIDAD</h3>
+          <p>Autenticación JWT de acceso de corta duración y rotación de Refresh Tokens almacenados en cookies HttpOnly.</p>
+        </article>
+
+        <article class="value-card">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <h3>PRODUCTIVIDAD</h3>
+          <p>Filtros avanzados por estado, buscador en tiempo real, categorización por etiquetas y papelera de reciclaje.</p>
+        </article>
+
+        <article class="value-card">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <h3>ACCESIBILIDAD</h3>
+          <p>Soporte nativo para modo claro y oscuro, navegación completa por teclado, etiquetas A11y y contraste adaptativo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dark Teal Banner Section -->
+  <section class="banner-section">
+    <div class="banner-inner">
+      <h2>¿Listo para optimizar tu productividad hoy?</h2>
+      <p>Optimiza la gestión de entregas, asigna prioridades y acelera el rendimiento de tus tareas.</p>
+      <button class="btn-light lg" type="button" (click)="goToRegister()">Vincúlate Ahora</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>PRODUCTOS</h4>
+        <ul>
+          <li>To-Do List Personal</li>
+          <li>Factoriación Inteligente</li>
+          <li>Cuenta Personal</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>LINKS DE INTERÉS</h4>
+        <ul>
+          <li>Términos y Condiciones</li>
+          <li>Tratamiento de datos</li>
+          <li>Atención al Consumidor</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SOBRE IRIS</h4>
+        <ul>
+          <li>Nosotros</li>
+          <li>Gobierno corporativo</li>
+          <li>Sostenibilidad</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTÁCTANOS</h4>
+        <p>Línea Ética: 01 8000 18 40 03</p>
+        <p>servicio_cliente@iris.com.co</p>
+        <p>Medellín: 604 6040222</p>
+        <p>Bogotá: 601 7446222</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 IRIS Compañía de Financiamiento. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</div>

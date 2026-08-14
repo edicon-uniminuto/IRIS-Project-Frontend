@@ -1,0 +1,75 @@
+<div class="login-layout">
+  <!-- Left Side: Teal Background with Arch-Framed Photo & Diagonal Corner Badge -->
+  <div class="hero-panel">
+    <div class="photo-arch-frame">
+      <div class="diagonal-teal-badge">
+        <div class="brand">
+          <svg class="brand-logo-svg" width="44" height="44" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="irisGradLogin" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00e676" />
+                <stop offset="50%" stop-color="#00d084" />
+                <stop offset="100%" stop-color="#60d1c5" />
+              </linearGradient>
+            </defs>
+            <g transform="rotate(-45 20 20)">
+              <rect x="6" y="14" width="28" height="12" rx="6" fill="url(#irisGradLogin)" />
+              <circle cx="27" cy="20" r="5" fill="#ffffff" />
+            </g>
+          </svg>
+          <strong>IRIS</strong>
+          <span class="brand-sub">To Do</span>
+        </div>
+      </div>
+      <img src="assets/images/iris-login-hero.jpg" alt="Socios IRIS" class="hero-img" />
+    </div>
+  </div>
+
+  <!-- Right Side: Clean IRIS Personal Form -->
+  <div class="form-panel">
+    <div class="form-container">
+      <h1 id="auth-title">¡Bienvenido(a)!</h1>
+
+      <div class="input-group demo-select-group">
+        <label for="demo-user-select">SELECCIÓN RÁPIDA (10 USUARIOS DEMO)</label>
+        <select id="demo-user-select" (change)="selectDemoUser($event)">
+          <option value="">-- Ingresar con usuario de prueba --</option>
+          @for (u of demoUsers; track u.email) {
+            <option [value]="u.email">{{ u.name }} ({{ u.role }})</option>
+          }
+        </select>
+      </div>
+
+      @if (error()) { <div class="alert" role="alert">{{ error() }}</div> }
+
+      <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <div class="input-group">
+          <label for="email">CORREO PERSONAL</label>
+          <input id="email" type="email" formControlName="email" autocomplete="email" placeholder="ejemplo@iris.com.co" />
+          @if (form.controls.email.touched && form.controls.email.invalid) { <small>Ingresa un correo electrónico válido.</small> }
+        </div>
+
+        <div class="input-group">
+          <div class="label-row">
+            <label for="password">CONTRASEÑA</label>
+            <span class="char-count">{{ form.controls.password.value.length }}/20</span>
+          </div>
+          <input id="password" type="password" formControlName="password" autocomplete="current-password" placeholder="••••••••••••" />
+          @if (form.controls.password.touched && form.controls.password.invalid) { <small>Mínimo 8 caracteres con mayúscula, minúscula y número.</small> }
+          <a href="#" class="forgot-link" (click)="$event.preventDefault()">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn-submit" type="submit" [disabled]="form.invalid || loading()">
+            {{ loading() ? 'Procesando…' : 'Siguiente ›' }}
+          </button>
+        </div>
+      </form>
+
+      <div class="secondary-links">
+        <a routerLink="/register" class="link-toggle">¿No tienes cuenta? Vincúlate aquí</a>
+        <a routerLink="/" class="link-back">← Volver al inicio</a>
+      </div>
+    </div>
+  </div>
+</div>
